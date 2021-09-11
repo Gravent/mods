@@ -1,0 +1,18 @@
+init python:
+    citem_map_portalus = ClickableItem(id="portalus", type="ui", button="/images/map/portal.webp", button_night="/images/map/portal.webp", lbl="portalus", predict="portalus", effect="light", ga_name="portalus", pos=(0, 0))
+    place_map5.layers.append(citem_map_portalus)
+
+    place_portalus = Place(
+        id="portalus",
+        name=_("Другое измерение"),
+        backgrounds={
+            "default": "/images/bg/anotherworld.webp",
+            "night": "/images/bg/anotherworld.webp"
+        },
+        ambience="music/ambience/town-day.ogg",
+        ambience_night="music/ambience/town-night.ogg"
+        )
+
+label portalus:
+ place place_portalus
+ $loop()

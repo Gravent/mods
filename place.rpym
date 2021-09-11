@@ -1,0 +1,18 @@
+init python:
+    citem_map_kushinahouse = ClickableItem(id="kushinahouse", type="ui", button="/images/map/homes.webp", button_night="/images/map/homesn.webp", lbl="kushinahouse", predict="kushinahouse", effect="light", ga_name="kushinahouse", pos=(0, 0))
+    place_map1.layers.append(citem_map_kushinahouse)
+
+    place_kushinahouse = Place(
+        id="kushinahouse",
+        name=_("Дом Кушины"),
+        backgrounds={
+            "default": "/images/bg/homushina.webp",
+            "night": "/images/bg/homushina_night.webp"
+        },
+        ambience="music/ambience/town-day.ogg",
+        ambience_night="music/ambience/town-night.ogg"
+        )
+
+label kushinahouse:
+ place place_kushinahouse
+ $loop()

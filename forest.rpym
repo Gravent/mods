@@ -1,0 +1,18 @@
+init python:
+    citem_map_formiko = ClickableItem(id="formiko", type="ui", button="/images/map/scroll.webp", button_night="/images/map/mikohomen.webp", lbl="formiko", predict="formiko", effect="light", ga_name="formiko", pos=(0, 0))
+    place_forest_left.layers.append(citem_map_formiko)
+
+    place_formiko = Place(
+        id="formiko",
+        name=_("Лес"),
+        backgrounds={
+            "default": "/images/bg/forest.webp",
+            "night": "/images/bg/forest.webp"
+        },
+        ambience="music/ambience/town-day.ogg",
+        ambience_night="music/ambience/town-night.ogg"
+        )
+
+label formiko:
+ place place_formiko
+ $loop()
